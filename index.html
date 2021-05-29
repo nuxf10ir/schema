@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="us">
+<head>
+    <meta charset="utf-8">
+    <title>Типы платежей</title>
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery-ui.structure.css" rel="stylesheet">
+    <link href="css/schema.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Как разные типы платежей попадают в реестр</h1>
+        <div class="wrapper__out">
+
+            <div class="grid-container">
+
+
+                <div class="op1">
+                    <div class="item__out">
+                        <div class="item">
+                            <div class="item__text">Операционные платежи</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reg1">
+                    <div class="item__out">
+                        <div class="item">
+                            <div class="item__text">Регулярные платежи</div>
+                        </div>
+                        <div class="arrow" style="left: 38px">
+                            <div></div>
+                        </div>
+                        <div class="arrow" style="right: 38px">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spn1">
+                    <div class="item__out">
+                        <div class="item">
+                            <div class="item__text">Спонтанные платежи</div>
+                        </div>
+                        <div class="arrow" style="left: 38px">
+                            <div></div>
+                        </div>
+                        <div class="arrow" style="right: 38px">
+                            <div style="height: 178px"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------------------- -->
+
+                <div class="op2 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="op2">
+                            <div class="item__tooltip">
+                                Такие платежи и поступления напрямую зависят от того, какие сделки запланируют менеджеры
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Плановые сделки</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan1 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="plan1,plan2">
+                            <div class="item__tooltip">
+                                Здесь нужно указать источник данных о платежах и поступления по сделкам, операции по которым еще
+                                не проведены.
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">План на месяц</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reg2 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="reg2">
+                            <div class="item__tooltip">
+                                Здесь нужно указать источник данных по сделкам, документы по которым уже есть
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Фактические данные</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="plan2 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="plan1,plan2">
+                            <div class="item__tooltip">
+                                Здесь нужно указать источник данных о платежах и поступления по сделкам, операции по которым еще
+                                не
+                                проведены
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">План на месяц</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="op3 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder"  data-accept="op3,reg4">
+                            <div class="item__tooltip">
+                                Операции должны пройти “фильтр” договорных условий, чтобы автоматически рассчитать дату
+                                предполагаемого платежа или поступления
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Схема расчетов</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reg3 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="reg3">
+                            <div class="item__tooltip">
+                                Перетащите сюда название документа-основания. Из него в реестр попадают данные по операциям,
+                                которые
+                                еще не отражены в учете
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Заявка на оплату</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reg4 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="op3,reg4">
+                            <div class="item__tooltip">
+                                Операции должны пройти “фильтр” договорных условий, чтобы автоматически рассчитать дату
+                                предполагаемого платежа или поступления
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Схема расчетов</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spn2 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="spn2">
+                            <div class="item__tooltip">
+                                Действенный способ избежать кассового разрыва - заложить в систему резерв на спонтанные платежи
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Резервы и лимиты</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spn3 droppable">
+                    <div class="item__out">
+                        <div class="item__placeholder" data-accept="spn3">
+                            <div class="item__tooltip">
+                                Перетащите сюда название документа-основания. Из него в реестр попадают данные по операциям,
+                                которые
+                                еще не отражены в учете
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__text">Заявка на оплату</div>
+                        </div>
+                        <div class="arrow">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------------------- -->
+
+
+                <div class="registry">
+                    <div class="item__out">
+                        <div class="item">
+                            <div class="item__text">Реестр платежей</div>
+                        </div>
+                        <div class="arrow" style="left: 130px;">
+                            <div></div>
+                        </div>
+                        <div class="arrow" style="right: 130px;">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="calendar">
+                    <div class="item__out">
+                        <div class="item">
+                            <div class="item__text">Платежный календарь</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exec">
+                    <div class="item__out">
+                        <div class="item">
+                            <div class="item__text">Исполнение платежей</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overlay" id="message_1">
+                <div class="overlay__content">
+                    <p>На схеме представлен порядок, в котором данные о платежах и поступления попадают в реестр.</p>
+                    <p>Постарайтесь запомнить схему, у вас есть 30 секунд.</p>
+                    <button type="button">Вперед</button>
+                </div>
+            </div>
+
+            <div class="overlay" id="message_2">
+                <div class="overlay__content">
+                    <p>Теперь попробуйте восстановить схему.</p>
+                    <p>Перетаскивайте блоки внизу на предназначенное для них место.</p>
+                    <p>Наведите курсор мышки на пустой блок, чтобы получить подсказку.</p>
+                    <button type="button">Вперед</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div id="timer">Осталось <span id="time">30</span> секунд</div>
+
+        <div id="variants">
+
+            <div class="variants__out">
+                <div class="draggable" id="op2">
+                    <div class="item__text">Плановые сделки</div>
+                </div>
+                <div class="draggable" id="plan1">
+                    <div class="item__text">План на месяц</div>
+                </div>
+                <div class="draggable" id="plan2">
+                    <div class="item__text">План на месяц</div>
+                </div>
+                <div class="draggable" id="reg2">
+                    <div class="item__text">Фактические данные</div>
+                </div>
+                <div class="draggable" id="reg4">
+                    <div class="item__text">Схема расчетов</div>
+                </div>
+                <div class="draggable" id="op3">
+                    <div class="item__text">Схема расчетов</div>
+                </div>
+                <div class="draggable" id="reg3">
+                    <div class="item__text">Заявка на оплату</div>
+                </div>
+                <div class="draggable" id="spn2">
+                    <div class="item__text">Резервы и лимиты</div>
+                </div>
+                <div class="draggable" id="spn3">
+                    <div class="item__text">Заявка на оплату</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
