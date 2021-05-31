@@ -40,7 +40,7 @@ $(function () {
 		$message1.fadeOut(function () {
 			$timer.fadeIn();
 			startTimer(30, $('#time'), function () {
-				$timer.remove();
+				$timer.fadeOut();
 				$message2.fadeIn();
 				$droppables.addClass('active');
 			});
