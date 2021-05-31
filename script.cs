@@ -1,5 +1,6 @@
 function startTimer(duration, display, callback) {
 	let timer = duration;
+	display.text(timer);
 	const interval = setInterval(function () {
 		display.text(timer);
 		if (--timer < 0) {
