@@ -19,11 +19,10 @@
 }
 
 .wrapper {
-    width: 900px;
+    width: 650px;
     margin: 0 auto;
     text-align: center;
     font-family: 'Berlingske Sans', Arial, Helvetica, sans-serif;
-
 }
 
 .wrapper__out {
@@ -32,17 +31,18 @@
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(5, 120px);
-    grid-template-rows: repeat(5, 80px);
-    gap: 50px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 70px);
+    gap: 62px 25px;
     grid-template-areas:
-    "op1 reg1 reg1 spn1 spn1"
-    "op2 plan1 reg2 plan2 ."
-    "op3 reg3 reg4 spn2 spn3"
-    "registry registry registry registry registry"
-    "calendar calendar . exec exec";
-    margin: 20px 60px;
+        "op1 reg1 reg1 spn1 spn1"
+        "op2 plan1 reg2 plan2 ."
+        "op3 reg3 reg4 spn2 spn3"
+        "registry registry registry registry registry"
+        "calendar calendar . exec exec";
+    margin: 20px;
     padding: 20px 0;
+    font-size: 12px;
 }
 .reg1 { grid-area: reg1; }
 .spn1 { grid-area: spn1; }
@@ -273,7 +273,7 @@
 
 #variants .draggable {
     display: flex;
-    width: 116px;
+    width: 96px;
     height: 80px;
     background: #ededed;
     border: 2px solid #bdbdbd;
@@ -281,6 +281,7 @@
     justify-content: center;
     border-radius: 4px;
     cursor: grab;
+    font-size: 12px;
 }
 
 #variants .draggable .item__text {
